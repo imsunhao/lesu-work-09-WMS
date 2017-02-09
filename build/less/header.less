@@ -124,9 +124,23 @@
     .logo-lg {
       //should be visibile when sidebar isn't collapsed
       display: block;
+      .clearfix();
+      img{
+        float: left;
+        margin-top:5px;
+      }
+      span{
+        float: left;
+        font-size: 18px;
+        font-weight: bolder;
+      }
     }
     .logo-mini {
       display: none;
+    }
+    img{
+      width: 30px;
+      height: 30px;
     }
   }
   //Navbar Brand. Alternative logo with layout-top-nav
@@ -225,6 +239,16 @@
     .navbar {
       width: 100%;
       float: none;
+    }
+    .logo{
+      span{
+        float: none !important;
+        font-weight: normal  !important;
+      }
+      img{
+        float: none !important;
+        margin: 0 10px;
+      }
     }
     .navbar {
       margin: 0;
