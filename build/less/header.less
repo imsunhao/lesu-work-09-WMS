@@ -232,6 +232,7 @@
     padding-bottom: 15px;
     line-height: 20px;
   }
+
 }
 
 // Collapse header
@@ -243,6 +244,7 @@
       width: 100%;
       float: none;
     }
+
     .logo {
       span {
         float: none !important;
@@ -253,11 +255,31 @@
         margin: 0 10px;
       }
     }
+
     .navbar {
       margin: 0;
     }
+
     .navbar-custom-menu {
       float: right;
+    }
+
+    >.navbar-static-top{
+      min-height: 0 !important;
+      position:  relative;
+      >.sidebar-toggle {
+        position: absolute;
+        top:-50px;
+        left: 0;
+      }
+      >.navbar-nav{
+        display: none;
+      }
+      >.systemOut{
+        position: absolute;
+        top:-50px;
+        right: 0;
+      }
     }
   }
 }
@@ -273,3 +295,5 @@
     }
   }
 }
+
+

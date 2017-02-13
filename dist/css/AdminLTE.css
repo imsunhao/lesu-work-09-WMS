@@ -10,6 +10,9 @@
  * Core: General Layout Style
  * -------------------------
  */
+* {
+  font-family: '微软雅黑', Helvetica, Arial, sans-serif;
+}
 html,
 body {
   height: 100%;
@@ -207,6 +210,9 @@ a:focus {
 .layout-top-nav .main-header .navbar {
   margin-left: 0;
 }
+.main-header .navbar .navbar-nav > li > a i {
+  padding-right: 5px;
+}
 .main-header #navbar-search-input.form-control {
   background: rgba(255, 255, 255, 0.2);
   border-color: transparent;
@@ -302,8 +308,29 @@ a:focus {
 .main-header .logo .logo-lg {
   display: block;
 }
+.main-header .logo .logo-lg:before,
+.main-header .logo .logo-lg:after {
+  content: " ";
+  display: table;
+}
+.main-header .logo .logo-lg:after {
+  clear: both;
+}
+.main-header .logo .logo-lg img {
+  float: left;
+}
+.main-header .logo .logo-lg span {
+  float: left;
+  font-size: 18px;
+  font-weight: bolder;
+}
 .main-header .logo .logo-mini {
   display: none;
+}
+.main-header .logo img {
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
 }
 .main-header .navbar-brand {
   color: #fff;
@@ -380,6 +407,23 @@ a:focus {
     padding-bottom: 15px;
     line-height: 20px;
   }
+  .main-header > .navbar-static-top {
+    min-height: 0 !important;
+    position: relative;
+  }
+  .main-header > .navbar-static-top > .sidebar-toggle {
+    position: absolute;
+    top: -50px;
+    left: 0;
+  }
+  .main-header > .navbar-static-top > .navbar-nav {
+    display: none;
+  }
+  .main-header > .navbar-static-top .systemOut {
+    position: absolute;
+    top: -50px;
+    right: 0;
+  }
 }
 @media (max-width: 767px) {
   .main-header {
@@ -389,6 +433,14 @@ a:focus {
   .main-header .navbar {
     width: 100%;
     float: none;
+  }
+  .main-header .logo span {
+    float: none !important;
+    font-weight: normal !important;
+  }
+  .main-header .logo img {
+    float: none !important;
+    margin: 0 10px;
   }
   .main-header .navbar {
     margin: 0;
@@ -534,6 +586,7 @@ a:focus {
 .sidebar-menu li.header {
   padding: 10px 25px 10px 15px;
   font-size: 12px;
+  font-family: "Arial";
 }
 .sidebar-menu li > a > .fa-angle-left,
 .sidebar-menu li > a > .pull-right-container > .fa-angle-left {
@@ -697,6 +750,9 @@ a:focus {
   right: 10px;
   top: 50%;
   margin-top: -7px;
+}
+.sidebar-menu li > a .shPull-right-container {
+  margin-top: 0 !important;
 }
 /*
  * Component: Control sidebar. By default, this is the right sidebar.
@@ -1244,7 +1300,7 @@ a:focus {
   }
   .navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
     position: absolute;
-    right: 5%;
+    right: 0;
     left: auto;
     border: 1px solid #ddd;
     background: #fff;

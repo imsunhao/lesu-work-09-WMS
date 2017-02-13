@@ -126,7 +126,7 @@ $.AdminLTE.options = {
   //them here too.
   screenSizes: {
     xs: 480,
-    sm: 768,
+    sm: 774,
     md: 992,
     lg: 1200
   }
